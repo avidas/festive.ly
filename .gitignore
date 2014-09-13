@@ -1,0 +1,15 @@
+*~
+*.swp
+*.swo
+*wiki*
+*venv*
+.DS_Store
+*.pyc
+*.pyo
+*.log
+env
+env*
+dist
+*.egg
+*.egg-info
+.tox

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Festively | Home</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+        <link href="static/css/lib/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="static/css/lib/styles.css" rel="stylesheet">
+    </head>
+    <body>
+
+<div class="navbar navbar-custom navbar-fixed-top">
+ <div class="navbar-header"><a class="navbar-brand" href="#">Festively</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <form class="navbar-form">
+        <div class="form-group" style="display:inline;">
+          <div class="input-group">
+            <input id="searchbox" type="text" class="form-control" placeholder="Find nearby festivals..">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span> </span>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+
+<div class="container-fluid" id="main">
+  <div class="row">
+    <div id="map-canvas"><!--map-canvas will be postioned here--></div>
+  </div>
+</div>
+<!-- end template -->
+
+    <!-- script references -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="static/js/lib/bootstrap.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&extension=.js&output=embed&libraries=places,drawing,geometry"></script>
+        <script src="static/js/main.js"></script>
+    </body>
+</html>
