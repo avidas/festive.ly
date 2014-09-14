@@ -13,7 +13,7 @@ $(document).ready(function(){
         });
         markers.push(marker);
     }
-    
+
     function initialize() {
 
         var initialLon = -97.67315599999999;

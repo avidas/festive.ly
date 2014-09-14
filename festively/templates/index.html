@@ -35,9 +35,42 @@
     </div>
 </div>
 
-<div class="container-fluid" id="main">
+<div class="container-fluid" id="main" style="padding-top:20px;">
   <div class="row">
-    <div id="map-canvas"><!--map-canvas will be postioned here--></div>
+    <div class="col-lg-12">
+      <div class="col-lg-6" id="left">
+
+        <div class="jumbotron" style="max-height: 300px;">
+          <p><b>Eid al-Adha </b>The next Islamic festival, is 20 days away.</p>
+          <p><a href="">Add to calendar</a></p>
+        </div>
+        <div class="panel panel-success">
+          <div class="panel-heading"><a href="">Locations nearby where you could volunteer</a></div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">North Austin Muslim Community Center</li>
+              <li class="list-group-item">Nueces Mosque</li>
+              <li class="list-group-item">Islamic Center of Greater Austin</li>
+              <li class="list-group-item">Masjid Ibrahim</li>
+              <li class="list-group-item">Islamic Ahlul Bayt Association</li>
+              <li class="list-group-item">Islamic Center of Brushy Creek</li>
+              <li class="list-group-item">Islamic Center of Round Rock</li>
+            </ul>
+            <hr>
+          </div>
+        </div>
+      </div>
+    <div class="col-lg-6" id="right">
+      <div class="panel panel-success" style="max-width: 650px; min-height: 550px;">
+        <div class="panel-heading">Panel heading without title</div>
+        <div class="panel-body">
+          <div id="map-canvas" style="max-width: 600px;"><!--map-canvas will be postioned here--></div>
+        </div>
+      </div>
+    </div>
+
+    <!--div id="map-canvas" class="col-lg-6" style="max-width: 600px;"></div-->
+  </div>
   </div>
 </div>
 <!-- end template -->
