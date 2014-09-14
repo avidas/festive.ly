@@ -52,6 +52,7 @@ Islamic Center of Round Rock (30.494335, -97.654810)
 
         //add marker to initial latitude and longitude
         //addMarker(initialLatLon);
+        showMosqueMarkers();
     };
 
     // Sets the map on all markers in the array.
@@ -112,8 +113,6 @@ Islamic Center of Round Rock (30.494335, -97.654810)
             addMarker(latlng);
             map.setCenter(latlng);
             map.setZoom(10);
-
-            showMosqueMarkers();
         }
     });
 });
