@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, jsonify, request, send_from_directory, redirect, url_for
-from festively.models import FestivalEntry
 import os
 
 festivals = Blueprint('festivals', __name__, template_folder='templates')
@@ -8,10 +7,11 @@ festivals = Blueprint('festivals', __name__, template_folder='templates')
 def index():
     return render_template('index.html')
 
-@festivals.route('/featured')
+@festivals.route('/search-results')
 def featured():
     return render_template('search_results.html')
 
+"""
 @festivals.route('/api/v1.0/festivals', methods=['GET'])
 def get_festivals():
     longitude = float(request.args.get('longitude', ''))
@@ -21,6 +21,7 @@ def get_festivals():
     festivals = FestivalEntry.objects(location__near=[
                                longitude, latitude], location__max_distance=50000)[:50]
     return jsonify({'festivals': festivals})
+"""
 
 @festivals.route('/icon.ico')
 def favicon():

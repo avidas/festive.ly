@@ -1,12 +1,10 @@
+"""
 from festively import db
 from datetime import datetime
 
 
 class FestivalEntry(db.DynamicDocument):
 
-    """Festival model, should have associated religion, religion,
-    subgroups, 
-    """
     created_at = db.DateTimeField(default=datetime.now, required=True)
     name = db.StringField(max_length=255)
     description = db.StringField(max_length=512)
@@ -15,9 +13,9 @@ class FestivalEntry(db.DynamicDocument):
     date = db.DateTimeField()
     # geojson field with lat and lon
     location = db.PointField(required=True)
-
+"""
     # text address for the festival entry
-    address = db.StringField(required=True, max_length=511)
+    # address = db.StringField(required=True, max_length=511)
     # tags = listfield
     # isVolunteerNeeded
     # isChildFriendly

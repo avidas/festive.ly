@@ -23,7 +23,7 @@ else:
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'secret')
 
 # connect MongoEngine with Flask App
-db = MongoEngine(app)
+#db = MongoEngine(app)
 
 def register_blueprints(app):
     # Prevents circular imports
