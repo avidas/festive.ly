@@ -11,7 +11,29 @@ $(document).ready(function(){
             map: map,
             animation: google.maps.Animation.DROP
         });
+        marker.setIcon('http://upload.wikimedia.org/wikipedia/commons/5/55/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Mosque_%E2%80%93_Tourism_%E2%80%93_Light.png');
+
         markers.push(marker);
+    }
+
+    /*
+    North Austin Muslim Community Center (30.389909, -97.683871)
+Nueces Mosque (30.283071, -97.744403)
+Islamic Center of Greater Austin (30.299660, -97.686769)
+Masjid Ibrahim (30.226751, -97.784788)
+Islamic Ahlul Bayt Association (30.440130, -97.760555)
+Islamic Center of Brushy Creek (30.507722, 97.792039)
+Islamic Center of Round Rock (30.494335, -97.654810)
+     */
+
+    function showMosqueMarkers() {
+        console.log("here");
+        trucks = [[30.389909, -97.683871],[30.283071, -97.744403],[30.299660, -97.686769],[30.226751, -97.784788],[30.440130, -97.760555],[30.507722, 97.792039],[30.494335, -97.654810]];
+        for (var i = 0; i < trucks.length; i++) {
+            var truckLatLng = new google.maps.LatLng(trucks[i][0], trucks[i][1]);
+            addMarker(truckLatLng);
+        }
+        showMarkers();
     }
 
     function initialize() {
@@ -24,7 +46,7 @@ $(document).ready(function(){
         //latitude and longitude
         var mapOptions = {
             center: initialLatLon,
-            zoom: 14
+            zoom: 10
         };
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
@@ -71,6 +93,7 @@ $(document).ready(function(){
     //Attach handler for enter pressed in search bar event
     $('#searchbox').bind('keypress', function(e) {
         if (e.keyCode==13){
+            //window.location = "http://festively.herokuapp.com/search-results";
 
             //clear existing markers on map
             deleteMarkers();
@@ -88,7 +111,9 @@ $(document).ready(function(){
             var latlng = new google.maps.LatLng(latitude, longitude);
             addMarker(latlng);
             map.setCenter(latlng);
-            map.setZoom(14);
+            map.setZoom(10);
+
+            showMosqueMarkers();
         }
     });
 });
