@@ -10,7 +10,7 @@ def index():
 
 @festivals.route('/featured')
 def featured():
-    return render_template('featured.html')
+    return render_template('search_results.html')
 
 @festivals.route('/api/v1.0/festivals', methods=['GET'])
 def get_festivals():
