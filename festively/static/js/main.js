@@ -51,7 +51,7 @@ Islamic Center of Round Rock (30.494335, -97.654810)
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
         //add marker to initial latitude and longitude
-        addMarker(initialLatLon);
+        //addMarker(initialLatLon);
     };
 
     // Sets the map on all markers in the array.
